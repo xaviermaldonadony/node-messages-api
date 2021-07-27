@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 	next();
 });
-app.use(cors());
+
 app.options('*', cors);
 
 app.use('/feed', feedRoutes);
@@ -88,5 +88,3 @@ mongoose
 	.catch((err) => {
 		console.log(err);
 	});
-
-// 27, 4
