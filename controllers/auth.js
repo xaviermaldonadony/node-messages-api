@@ -67,7 +67,8 @@ exports.login = (req, res, next) => {
 				throw error;
 			}
 			// create token with signature
-			const token = jwt.sign(
+
+			const token = jwt.sin(
 				{ email: loadedUser.email, userId: loadedUser._id.toString() },
 				JWT_SECRET_KEY,
 				{ expiresIn: '1h' }
